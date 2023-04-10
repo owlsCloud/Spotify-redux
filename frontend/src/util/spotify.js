@@ -144,3 +144,6 @@ export const getCurrentUserProfile = () => axios.get("/me");
 
 export const getUserTopArtist = () => axios.get("/me/top/artists?limit=1");
 export const getUserTopTrack = () => axios.get("/me/top/tracks?limit=1");
+
+export const getUserTop20Artist = () => axios.get("/me/top/artists");
+export const getUserTop20Track = () => axios.get("/me/top/tracks");

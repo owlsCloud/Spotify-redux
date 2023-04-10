@@ -21,7 +21,7 @@ export default function Home() {
     fetchData();
   }, []);
   return (
-    <main className="bg-[#121212] w-full h-screen">
+    <main className="w-full h-screen">
       <div className="flex justify-center items-center h-full">
         {!token ? (
           <a
@@ -35,13 +35,6 @@ export default function Home() {
             {user && (
               <>
                 <ProfileHero user={user} />
-                <a
-                  href="#"
-                  onClick={logout}
-                  className="mt-4 text-white py-1 rounded-[20px] text-2xl bg-[#1DB954]"
-                >
-                  Log out
-                </a>
               </>
             )}
           </div>

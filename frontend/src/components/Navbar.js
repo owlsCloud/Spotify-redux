@@ -1,7 +1,7 @@
 import React from "react";
 import { FaGithub, FaMusic, FaSpotify } from "react-icons/fa";
 import { MdGroups, MdPlaylistPlay, MdRecommend } from "react-icons/md";
-import LogoutButton from "./LogoutButton";
+
 const Navbar = () => {
   return (
     <nav className="flex flex-col absolute left-0 top-0 h-[100%] justify-between px-4  text-center z-100 text-white items-center bg-black">
@@ -28,7 +28,6 @@ const Navbar = () => {
         <a href="https://github.com/owlsCloud/spotify-redux">
           <FaGithub size="2em" className="my-2 hover:text-[#1DB954]" />
         </a>
-        <LogoutButton />
       </div>
     </nav>
   );

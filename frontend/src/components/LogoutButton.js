@@ -1,14 +1,11 @@
 import { logout } from "@/util/spotify";
 import React from "react";
+import { MdLogout } from "react-icons/md";
 const LogoutButton = () => {
   return (
     <div className="">
-      <a
-        href="#"
-        onClick={logout}
-        className="mt-4 text-white  rounded-[20px] text-lg border-2 py-1 px-2 hover:text-black hover:bg-[#1DB954] hover:border-0"
-      >
-        Log out
+      <a href="#" onClick={logout}>
+        <MdLogout size="2em" className="hover:text-[#1DB954]" />
       </a>
     </div>
   );

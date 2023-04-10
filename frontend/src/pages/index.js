@@ -1,8 +1,5 @@
-import { Inter } from "next/font/google";
 import Image from "next/image";
 import { useEffect } from "react";
-
-const inter = Inter({ subsets: ["latin"] });
 
 export default function Home() {
   useEffect(() => {
@@ -16,10 +13,15 @@ export default function Home() {
     // console.log(accessToken);
   }, []);
   return (
-    <main className="">
-      <a href="http://localhost:8888/login" className="">
-        Login to Spotify
-      </a>
+    <main className="bg-[#121212] w-full h-screen">
+      <div className="flex justify-center items-center h-full">
+        <a
+          href="http://localhost:8888/login"
+          className="text-white px-4 py-1.5 rounded-[20px] text-2xl bg-[#1DB954]"
+        >
+          Login to Spotify
+        </a>
+      </div>
     </main>
   );
 }

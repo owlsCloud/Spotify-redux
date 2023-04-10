@@ -28,7 +28,7 @@ app.get("/login", (req, res) => {
   const state = generateRandomString(16);
   res.cookie(stateKey, state);
 
-  const scope = "user-read-private user-read-email";
+  const scope = "user-read-private user-read-email user-top-read";
   const queryParams = querystring.stringify({
     client_id: client_id,
     response_type: "code",
@@ -60,10 +60,11 @@ app.get("/callback", (req, res) => {
   })
     .then((response) => {
       if (response.status === 200) {
-        const { access_token, refresh_token } = response.data;
+        const { access_token, refresh_token, expires_in } = response.data;
         const queryParams = querystring.stringify({
           access_token,
           refresh_token,
+          expires_in,
         });
         //redirect to next
         //pass tokens in params
